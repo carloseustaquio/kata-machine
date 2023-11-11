@@ -1,3 +1,11 @@
+const log = (list: List<number>) => {
+    let result = ''
+    for (let i = 0; i < list.length; i++) {
+        result += list.get(i)+ ' -> ' ;
+    }
+    console.log(result);
+}
+
 export function test_list(list: List<number>): void {
     list.append(5);
     list.append(7);
@@ -23,4 +31,13 @@ export function test_list(list: List<number>): void {
     expect(list.remove(9)).toEqual(9);
     expect(list.length).toEqual(2);
     expect(list.get(0)).toEqual(7);
+
+    list.insertAt(6, 0);
+    list.insertAt(3, 3);
+    list.removeAt(0);
+
+    expect(list.length).toBe(3);
+    expect(list.get(0)).toBe(7);
+    expect(list.get(1)).toBe(5);
+    expect(list.get(2)).toBe(3);
 }
