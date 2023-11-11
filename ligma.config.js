@@ -7,7 +7,7 @@ module.exports = {
         "TwoCrystalBalls",
         "BubbleSort",
         "SinglyLinkedList",
-        // "DoublyLinkedList",
+        "DoublyLinkedList",
         // "Queue",
         // "Stack",
         // "ArrayList",
