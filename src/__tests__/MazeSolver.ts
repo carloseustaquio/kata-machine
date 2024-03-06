@@ -33,13 +33,13 @@ test("maze solver", function () {
     expect(drawPath(maze, result)).toEqual(drawPath(maze, mazeResult));
 });
 
-function drawPath(data: string[], path: Point[]) {
-    const data2 = data.map((row) => row.split(''));
+function drawPath(maze: string[], path: Point[]) {
+    const mazeArr = maze.map((row) => row.split(''));
     path.forEach((p) => {
-        if (data2[p.y] && data2[p.y][p.x]) {
-            data2[p.y][p.x] = '*';
+        if (mazeArr[p.y] && mazeArr[p.y][p.x]) {
+            mazeArr[p.y][p.x] = '*';
         }
     });
-    return data2.map(d => d.join(''));
+    return mazeArr.map(d => d.join(''));
 }
 
