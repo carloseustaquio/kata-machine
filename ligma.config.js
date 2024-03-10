@@ -12,7 +12,7 @@ module.exports = {
         "Stack",
         // "ArrayList",
         "MazeSolver",
-        // "QuickSort",
+        "QuickSort",
         // "BTPreOrder",
         // "BTInOrder",
         // "BTPostOrder",
